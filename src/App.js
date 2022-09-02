@@ -1,26 +1,26 @@
+import CreateProps from './CreateProps';
+import Image1 from './images/johnfidelis.jpg';
+import Image2 from './images/reactImg.jpeg';
+import Image3 from './images/contact.jpg';
+
+function App() {
+
+  const items = [
+    {image:Image1, heading: 'Basic Data', text: `Name: John Fidelis. Country: Nigeria. Profession: Web Developer/Mentor`, },
+    {image:Image2, heading: 'Tech Stack', text: `JavaScript, React.js, Next.js, MaterialUI, HTML, CSS and Bootstrap5 `,  },
+    {image:Image3, heading: 'Contacts', text: `LinkedIn: fidelisjohn, Twitter: heisfidelisjohn and Gmail: fidelisjohn836@gmail.com` },
+
+  ]
 
 
-export default function App() {
+  return(
+<>
+<CreateProps items={items}/>
 
-  let list = [
-    { name: 'Uyai', id: "hdf", favouriteStack: 'React.js' },
-    { name: 'Uyai', id: "href", favouriteStack: 'React.js' },
-    { name: 'Gabriel', id: "iotr", favouriteStack: 'Vue.js' },
-    { name: 'Gideon', id: "poas", favouriteStack: 'Next.js' },
-    { name: 'Cyril', id: "xa", favouriteStack: 'Node.js' },
-    { name: 'Jude', id: "ois", favouriteStack: 'Django' }
-  ];
-
-  return (
-    <>
-    <div>
-      {list.map((listItem, index) => (
-        <h1 key={listItem.id} >{`${listItem.name} loves writing ${listItem.favouriteStack}, has a key of ${listItem.id}`}</h1>
-      )
-      )};
-        </div>
-    </>
+</>
   );
+}
 
-};
+export default App;
+
 
